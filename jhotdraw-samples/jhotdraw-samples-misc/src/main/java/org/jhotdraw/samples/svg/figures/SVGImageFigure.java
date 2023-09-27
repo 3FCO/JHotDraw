@@ -41,7 +41,7 @@ import org.jhotdraw.util.*;
  * @author Werner Randelshofer
  * @version $Id$
  */
-public class SVGImageFigure extends SVGAttributedFigure implements SVGFigure, ImageHolderFigure {
+public class SVGImageFigure extends SVGAttributedFigure implements SVGFigure, ImageHolderFigure, HandleFactory {
 
     private static final long serialVersionUID = 1L;
     /**
