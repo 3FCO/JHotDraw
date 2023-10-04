@@ -39,12 +39,15 @@ public class RedoAction extends AbstractViewAction {
     private static final long serialVersionUID = 1L;
     public static final String ID = "edit.redo";
     private ResourceBundleUtil labels = ResourceBundleUtil.getBundle("org.jhotdraw.action.Labels");
-    private transient PropertyChangeListener redoActionPropertyListener = evt -> {
-        String name = evt.getPropertyName();
-        if ((name == null && Action.NAME == null) || (name != null && name.equals(Action.NAME))) {
-            putValue(Action.NAME, evt.getNewValue());
-        } else if ("enabled".equals(name)) {
-            updateEnabledState();
+    private PropertyChangeListener redoActionPropertyListener = new PropertyChangeListener() {
+        @Override
+        public void propertyChange(PropertyChangeEvent evt) {
+            String name = evt.getPropertyName();
+            if ((name == null && AbstractAction.NAME == null) || (name != null && name.equals(AbstractAction.NAME))) {
+                putValue(AbstractAction.NAME, evt.getNewValue());
+            } else if ("enabled".equals(name)) {
+                updateEnabledState();
+            }
         }
     };
 
@@ -73,8 +76,8 @@ public class RedoAction extends AbstractViewAction {
         if (newValue != null
                 && newValue.getActionMap().get(ID) != null
                 && newValue.getActionMap().get(ID) != this) {
-            putValue(Action.NAME, newValue.getActionMap().get(ID).
-                    getValue(Action.NAME));
+            putValue(AbstractAction.NAME, newValue.getActionMap().get(ID).
+                    getValue(AbstractAction.NAME));
             updateEnabledState();
         }
     }
@@ -92,7 +95,7 @@ public class RedoAction extends AbstractViewAction {
     }
 
     /**
-     * Uninstalls listeners on the view object.
+     * Installs listeners on the view object.
      */
     @Override
     protected void uninstallViewListeners(View p) {
