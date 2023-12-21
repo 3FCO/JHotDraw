@@ -65,7 +65,7 @@ public class DuplicateAction extends AbstractSelectionAction {
      * @param target The target of the action. Specify null for the currently
      * focused component.
      */
-    @FeatureEntryPoint(value="DuplicateAction")
+    @FeatureEntryPoint("DuplicateAction")
     public DuplicateAction(JComponent target) {
         super(target);
         ResourceBundleUtil labels = ResourceBundleUtil.getBundle("org.jhotdraw.action.Labels");

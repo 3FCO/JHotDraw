@@ -51,7 +51,7 @@ public class PasteAction extends AbstractSelectionAction {
      * @param target The target of the action. Specify null for the currently
      * focused component.
      */
-    @FeatureEntryPoint(value="PasteAction")
+    @FeatureEntryPoint("PasteAction")
 
     public PasteAction(JComponent target) {
         super(target);
