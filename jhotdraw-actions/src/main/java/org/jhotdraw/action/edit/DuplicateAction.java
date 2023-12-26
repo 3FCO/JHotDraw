@@ -73,6 +73,7 @@ public class DuplicateAction extends AbstractSelectionAction {
     }
 
     @Override
+    @FeatureEntryPoint("DuplicateActionPerformed")
     public void actionPerformed(ActionEvent evt) {
         JComponent c = target;
         if (c == null && (KeyboardFocusManager.getCurrentKeyboardFocusManager().

@@ -23,6 +23,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.prefs.*;
 import javax.swing.*;
+
+import dk.sdu.mmmi.featuretracer.lib.FeatureEntryPoint;
 import org.jhotdraw.api.app.Application;
 import org.jhotdraw.api.app.ApplicationModel;
 import org.jhotdraw.api.app.Disposable;
@@ -401,7 +403,7 @@ public abstract class AbstractApplication extends AbstractBean implements Applic
     @Override
     public void addWindow(Window window, View p) {
     }
-
+    @FeatureEntryPoint("getActionStringActionID")
     protected Action getAction(View view, String actionID) {
         return getActionMap(view).get(actionID);
     }
@@ -413,6 +415,7 @@ public abstract class AbstractApplication extends AbstractBean implements Applic
      * @param view the view
      * @param actionID the action id
      */
+    @FeatureEntryPoint("addAction")
     protected void addAction(JMenu m, View view, String actionID) {
         addAction(m, getAction(view, actionID));
     }
@@ -423,6 +426,7 @@ public abstract class AbstractApplication extends AbstractBean implements Applic
      * @param m the menu
      * @param a the action
      */
+    @FeatureEntryPoint("addActionTypeAction")
     protected void addAction(JMenu m, Action a) {
         if (a != null) {
             if (m.getClientProperty("needsSeparator") == Boolean.TRUE) {

@@ -7,6 +7,7 @@
  */
 package org.jhotdraw.app;
 
+import dk.sdu.mmmi.featuretracer.lib.FeatureEntryPoint;
 import org.jhotdraw.api.app.MenuBuilder;
 import org.jhotdraw.api.app.ApplicationModel;
 import org.jhotdraw.api.app.View;
@@ -304,6 +305,7 @@ public class SDIApplication extends AbstractApplication {
     /**
      * Creates a menu bar.
      */
+    @FeatureEntryPoint("JMenuBar")
     protected JMenuBar createMenuBar(View v) {
         JMenuBar mb = new JMenuBar();
         // Get menus from application model

@@ -12,6 +12,8 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import javax.swing.AbstractAction;
 import javax.swing.JComponent;
+
+import dk.sdu.mmmi.featuretracer.lib.FeatureEntryPoint;
 import org.jhotdraw.api.gui.EditableComponent;
 import org.jhotdraw.beans.WeakPropertyChangeListener;
 
@@ -61,6 +63,7 @@ public abstract class AbstractSelectionAction extends AbstractAction {
      * @param target The target of the action. Specify null for the currently
      * focused component.
      */
+    @FeatureEntryPoint("AbstractSelectionAction")
     public AbstractSelectionAction(JComponent target) {
         this.target = target;
         if (target != null) {

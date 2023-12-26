@@ -52,7 +52,6 @@ public class PasteAction extends AbstractSelectionAction {
      * focused component.
      */
     @FeatureEntryPoint("PasteAction")
-
     public PasteAction(JComponent target) {
         super(target);
         ResourceBundleUtil labels = ResourceBundleUtil.getBundle("org.jhotdraw.action.Labels");
@@ -60,6 +59,7 @@ public class PasteAction extends AbstractSelectionAction {
     }
 
     @Override
+    @FeatureEntryPoint("PasteActionPerformed")
     public void actionPerformed(ActionEvent evt) {
         JComponent c = target;
         if (c == null && (KeyboardFocusManager.getCurrentKeyboardFocusManager().

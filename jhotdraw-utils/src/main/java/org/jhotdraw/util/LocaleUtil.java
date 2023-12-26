@@ -8,6 +8,7 @@
 package org.jhotdraw.util;
 
 import java.util.*;
+import dk.sdu.mmmi.featuretracer.lib.FeatureEntryPoint;
 
 /**
  * LocaleUtil provides a setDefault()/getDefault() wrapper to java.util.Locale
@@ -30,7 +31,7 @@ public class LocaleUtil {
     public static void setDefault(Locale newValue) {
         defaultLocale = newValue;
     }
-
+    @FeatureEntryPoint("getDefaultUtil")
     public static Locale getDefault() {
         return (defaultLocale == null) ? Locale.getDefault() : defaultLocale;
     }
