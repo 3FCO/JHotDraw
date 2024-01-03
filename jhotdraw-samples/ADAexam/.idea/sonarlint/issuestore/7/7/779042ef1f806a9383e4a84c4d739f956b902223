@@ -1,11 +1,0 @@
-
-b	java:S112W"FDefine and throw a dedicated exception instead of using a generic one.(†ô•†8«ÇĞÌ1
-b	java:S112b"FDefine and throw a dedicated exception instead of using a generic one.(Åü«8ÅşÇĞÌ1
-^	java:S119"IRename this generic name to match the regular expression '^[A-Z][0-9]?$'.(¶‘Ú
-t
-java:S3012M"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(Ô£Í†ûÿÿÿÿ
-9
-java:S1116b"Remove this empty statement.(Åü«8·ÿÇĞÌ1
-L
-java:S1854§"5Remove this useless assignment to local variable "i".(áĞ¦ê
-A	java:S106­"+Replace this use of System.out by a logger.(¼®ÊÈ
