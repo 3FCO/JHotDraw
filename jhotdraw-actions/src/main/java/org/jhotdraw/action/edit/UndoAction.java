@@ -67,6 +67,7 @@ public class UndoAction extends AbstractViewAction {
     }
 
     @Override
+    @FeatureEntryPoint("UndoUpdateView")
     protected void updateView(View oldValue, View newValue) {
         super.updateView(oldValue, newValue);
         if (newValue != null
@@ -91,7 +92,7 @@ public class UndoAction extends AbstractViewAction {
     }
 
     /**
-     * Installs listeners on the view object.
+     * Uninstalls listeners on the view object.
      */
     @Override
     protected void uninstallViewListeners(View p) {
@@ -103,6 +104,7 @@ public class UndoAction extends AbstractViewAction {
     }
 
     @Override
+    @FeatureEntryPoint("UndoActionPerformed")
     public void actionPerformed(ActionEvent e) {
         Action realUndoAction = getRealUndoAction();
         if (realUndoAction != null && realUndoAction != this) {

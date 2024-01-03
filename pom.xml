@@ -131,5 +131,6 @@
 	 <module>jhotdraw-app</module>
 	 <module>jhotdraw-datatransfer</module>
 	 <module>jhotdraw-actions</module>
-	</modules>
+        <module>jhotdraw-tests</module>
+    </modules>
 </project>

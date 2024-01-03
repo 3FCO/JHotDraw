@@ -68,6 +68,7 @@ public class RedoAction extends AbstractViewAction {
     }
 
     @Override
+    @FeatureEntryPoint("RedoUpdateView")
     protected void updateView(View oldValue, View newValue) {
         super.updateView(oldValue, newValue);
         if (newValue != null
@@ -104,6 +105,7 @@ public class RedoAction extends AbstractViewAction {
     }
 
     @Override
+    @FeatureEntryPoint("RedoActionPerformed")
     public void actionPerformed(ActionEvent e) {
         Action realAction = getRealRedoAction();
         if (realAction != null && realAction != this) {

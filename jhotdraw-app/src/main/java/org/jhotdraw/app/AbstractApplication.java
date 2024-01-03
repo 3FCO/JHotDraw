@@ -23,6 +23,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.prefs.*;
 import javax.swing.*;
+
+import dk.sdu.mmmi.featuretracer.lib.FeatureEntryPoint;
 import org.jhotdraw.api.app.Application;
 import org.jhotdraw.api.app.ApplicationModel;
 import org.jhotdraw.api.app.Disposable;
@@ -199,6 +201,8 @@ public abstract class AbstractApplication extends AbstractBean implements Applic
      *
      * @param newValue Active view, can be null.
      */
+
+    @FeatureEntryPoint("SetActiveView")
     public void setActiveView(View newValue) {
         View oldValue = activeView;
         if (activeView != null) {
