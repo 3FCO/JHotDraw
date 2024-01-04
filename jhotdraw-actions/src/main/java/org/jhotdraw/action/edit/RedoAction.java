@@ -39,15 +39,12 @@ public class RedoAction extends AbstractViewAction {
     private static final long serialVersionUID = 1L;
     public static final String ID = "edit.redo";
     private ResourceBundleUtil labels = ResourceBundleUtil.getBundle("org.jhotdraw.action.Labels");
-    private PropertyChangeListener redoActionPropertyListener = new PropertyChangeListener() {
-        @Override
-        public void propertyChange(PropertyChangeEvent evt) {
-            String name = evt.getPropertyName();
-            if ((name == null && AbstractAction.NAME == null) || (name != null && name.equals(AbstractAction.NAME))) {
-                putValue(AbstractAction.NAME, evt.getNewValue());
-            } else if ("enabled".equals(name)) {
-                updateEnabledState();
-            }
+    private transient PropertyChangeListener redoActionPropertyListener = evt -> {
+        String name = evt.getPropertyName();
+        if ((name == null && Action.NAME == null) || (name != null && name.equals(Action.NAME))) {
+            putValue(Action.NAME, evt.getNewValue());
+        } else if ("enabled".equals(name)) {
+            updateEnabledState();
         }
     };
 
@@ -71,13 +68,14 @@ public class RedoAction extends AbstractViewAction {
     }
 
     @Override
+    @FeatureEntryPoint("RedoUpdateView")
     protected void updateView(View oldValue, View newValue) {
         super.updateView(oldValue, newValue);
         if (newValue != null
                 && newValue.getActionMap().get(ID) != null
                 && newValue.getActionMap().get(ID) != this) {
-            putValue(AbstractAction.NAME, newValue.getActionMap().get(ID).
-                    getValue(AbstractAction.NAME));
+            putValue(Action.NAME, newValue.getActionMap().get(ID).
+                    getValue(Action.NAME));
             updateEnabledState();
         }
     }
@@ -107,6 +105,7 @@ public class RedoAction extends AbstractViewAction {
     }
 
     @Override
+    @FeatureEntryPoint("RedoActionPerformed")
     public void actionPerformed(ActionEvent e) {
         Action realAction = getRealRedoAction();
         if (realAction != null && realAction != this) {

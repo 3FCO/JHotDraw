@@ -112,6 +112,7 @@ public class DeleteAction extends TextAction {
     }
 
     @Override
+    @FeatureEntryPoint("DeleteActionPerformed")
     public void actionPerformed(ActionEvent evt) {
         JComponent c = target;
         if (c == null && (KeyboardFocusManager.getCurrentKeyboardFocusManager().
