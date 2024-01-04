@@ -1,14 +1,15 @@
 {
-  "className": "org.jhotdraw.action.edit.JGiven.UndoJGivenBDDTest",
+  "className": "org.jhotdraw.samples.svg.undo.UndoJGivenBDDTest",
   "name": "Undo J Given BDD",
   "scenarios": [
     {
-      "className": "org.jhotdraw.action.edit.JGiven.UndoJGivenBDDTest",
+      "className": "org.jhotdraw.samples.svg.undo.UndoJGivenBDDTest",
       "testMethodName": "user_undoes_mistake",
       "description": "user undoes mistake",
       "tagIds": [],
       "explicitParameters": [],
       "derivedParameters": [],
+      "casesAsTable": false,
       "scenarioCases": [
         {
           "caseNr": 1,
@@ -25,9 +26,7 @@
                 }
               ],
               "status": "PASSED",
-              "durationInNanos": 399760500,
-              "depth": 0,
-              "parentFailed": false
+              "durationInNanos": 314843500
             },
             {
               "name": "the user undoes the mistake",
@@ -41,9 +40,7 @@
                 }
               ],
               "status": "FAILED",
-              "durationInNanos": 280373193200,
-              "depth": 0,
-              "parentFailed": false
+              "durationInNanos": 3258400
             },
             {
               "name": "the mistake is corrected",
@@ -57,9 +54,7 @@
                 }
               ],
               "status": "SKIPPED",
-              "durationInNanos": 0,
-              "depth": 0,
-              "parentFailed": false
+              "durationInNanos": 0
             }
           ],
           "explicitArguments": [],
@@ -70,11 +65,11 @@
             "java.desktop/javax.swing.undo.UndoManager.tryUndoOrRedo(UndoManager.java:468)",
             "java.desktop/javax.swing.undo.UndoManager.undo(UndoManager.java:416)",
             "org.jhotdraw.undo.UndoRedoManager.undo(UndoRedoManager.java:269)",
-            "org.jhotdraw.action.edit.JGiven.Stages.WhenUserUndoes.the_user_undoes_the_mistake(WhenUserUndoes.java:23)",
-            "org.jhotdraw.action.edit.JGiven.Stages.WhenUserUndoes$ByteBuddy$r9TzVJlI.the_user_undoes_the_mistake$accessor$ZPwsFDx3(Unknown Source)",
-            "org.jhotdraw.action.edit.JGiven.Stages.WhenUserUndoes$ByteBuddy$r9TzVJlI$auxiliary$Apu1BSj0.call(Unknown Source)",
-            "org.jhotdraw.action.edit.JGiven.Stages.WhenUserUndoes$ByteBuddy$r9TzVJlI.the_user_undoes_the_mistake(Unknown Source)",
-            "org.jhotdraw.action.edit.JGiven.UndoJGivenBDDTest.user_undoes_mistake(UndoJGivenBDDTest.java:14)",
+            "org.jhotdraw.samples.svg.undo.Stages.WhenUserUndoes.the_user_undoes_the_mistake(WhenUserUndoes.java:23)",
+            "org.jhotdraw.samples.svg.undo.Stages.WhenUserUndoes$ByteBuddy$e4cylPXc.the_user_undoes_the_mistake$accessor$SP9a88fb(Unknown Source)",
+            "org.jhotdraw.samples.svg.undo.Stages.WhenUserUndoes$ByteBuddy$e4cylPXc$auxiliary$bhtSOyaQ.call(Unknown Source)",
+            "org.jhotdraw.samples.svg.undo.Stages.WhenUserUndoes$ByteBuddy$e4cylPXc.the_user_undoes_the_mistake(Unknown Source)",
+            "org.jhotdraw.samples.svg.undo.UndoJGivenBDDTest.user_undoes_mistake(UndoJGivenBDDTest.java:14)",
             "java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)",
             "java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)",
             "java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)",
@@ -105,11 +100,10 @@
             "com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)",
             "com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)"
           ],
-          "durationInNanos": 280796829700
+          "durationInNanos": 360470600
         }
       ],
-      "casesAsTable": false,
-      "durationInNanos": 280796829700
+      "durationInNanos": 360470600
     }
   ],
   "tagMap": {}
