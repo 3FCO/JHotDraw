@@ -1,0 +1,116 @@
+{
+  "className": "org.jhotdraw.action.edit.JGiven.UndoJGivenBDDTest",
+  "name": "Undo J Given BDD",
+  "scenarios": [
+    {
+      "className": "org.jhotdraw.action.edit.JGiven.UndoJGivenBDDTest",
+      "testMethodName": "user_undoes_mistake",
+      "description": "user undoes mistake",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "the user has made a mistake",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the user has made a mistake"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 399760500,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "the user undoes the mistake",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the user undoes the mistake"
+                }
+              ],
+              "status": "FAILED",
+              "durationInNanos": 280373193200,
+              "depth": 0,
+              "parentFailed": false
+            },
+            {
+              "name": "the mistake is corrected",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the mistake is corrected"
+                }
+              ],
+              "status": "SKIPPED",
+              "durationInNanos": 0,
+              "depth": 0,
+              "parentFailed": false
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "FAILED",
+          "errorMessage": "javax.swing.undo.CannotUndoException: null",
+          "stackTrace": [
+            "java.desktop/javax.swing.undo.UndoManager.tryUndoOrRedo(UndoManager.java:468)",
+            "java.desktop/javax.swing.undo.UndoManager.undo(UndoManager.java:416)",
+            "org.jhotdraw.undo.UndoRedoManager.undo(UndoRedoManager.java:269)",
+            "org.jhotdraw.action.edit.JGiven.Stages.WhenUserUndoes.the_user_undoes_the_mistake(WhenUserUndoes.java:23)",
+            "org.jhotdraw.action.edit.JGiven.Stages.WhenUserUndoes$ByteBuddy$r9TzVJlI.the_user_undoes_the_mistake$accessor$ZPwsFDx3(Unknown Source)",
+            "org.jhotdraw.action.edit.JGiven.Stages.WhenUserUndoes$ByteBuddy$r9TzVJlI$auxiliary$Apu1BSj0.call(Unknown Source)",
+            "org.jhotdraw.action.edit.JGiven.Stages.WhenUserUndoes$ByteBuddy$r9TzVJlI.the_user_undoes_the_mistake(Unknown Source)",
+            "org.jhotdraw.action.edit.JGiven.UndoJGivenBDDTest.user_undoes_mistake(UndoJGivenBDDTest.java:14)",
+            "java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)",
+            "java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)",
+            "java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)",
+            "org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)",
+            "org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)",
+            "org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)",
+            "org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)",
+            "com.tngtech.jgiven.junit.JGivenMethodRule$1.evaluate(JGivenMethodRule.java:73)",
+            "org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)",
+            "org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)",
+            "org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)",
+            "org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)",
+            "org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)",
+            "org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)",
+            "org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)",
+            "org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)",
+            "org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)",
+            "org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)",
+            "org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:61)",
+            "org.junit.rules.RunRules.evaluate(RunRules.java:20)",
+            "org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)",
+            "org.junit.runners.ParentRunner.run(ParentRunner.java:413)",
+            "org.junit.runner.JUnitCore.run(JUnitCore.java:137)",
+            "com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)",
+            "com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)",
+            "com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)",
+            "com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)",
+            "com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)",
+            "com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)"
+          ],
+          "durationInNanos": 280796829700
+        }
+      ],
+      "casesAsTable": false,
+      "durationInNanos": 280796829700
+    }
+  ],
+  "tagMap": {}
+}
